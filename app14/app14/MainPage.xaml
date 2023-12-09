@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app14.MainPage" BackgroundColor="DarkBlue" >
+    
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelEntryStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+                
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                
+                
+                
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <!-- Centramos horizontalmente -->
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <!-- Centramos verticalmente -->
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+        <ScrollView>
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" >
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2C3E50" Offset="0.1" />
+                    
+                    <GradientStop Color="#34495E" Offset="0.3" />
+                  
+                    <GradientStop Color="#7F8C8D" Offset="0.6" />
+                 
+                    <GradientStop Color="#2E4053" Offset="0.9" />
+                  
+                </LinearGradientBrush>
+            </StackLayout.Background>
+
+            <Label Text="Bienvenidos al Sistema de Calificación" FontSize="36"
+               HorizontalTextAlignment="Center" Margin="0,0,0,20"
+               TextColor="DarkBlue" FontAttributes="Bold"/>
+
+            <StackLayout>
+                <Button Text="🌐 Probar Conexión" Clicked="TestConnection_Clicked" 
+                         WidthRequest="180"
+                         HorizontalOptions="CenterAndExpand" 
+                         VerticalOptions="CenterAndExpand" 
+                         BackgroundColor="GreenYellow" />
+
+            </StackLayout>
+            <Label Text="Profesor" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="ProfesorEntry" Placeholder="Ingrese Nombre Profesor" Keyboard="Text" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Matrícula" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="MatriculaEntry" Placeholder="Ingrese la matrícula" Keyboard="Text" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Nombre" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="NombreEntry" Placeholder="Ingrese el nombre" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Nota de asistencia" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="AsistenciaEntry" Placeholder="Ingrese la nota de asistencia" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Nota de Trabajo Práctico" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="TrabajoPracticoEntry" Placeholder="Ingrese la nota del trabajo práctico" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Nota del Examen Parcial" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="ExamenParcialEntry" Placeholder="Ingrese la nota del examen parcial" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
+
+            <Label Text="Nota del Examen Final" Style="{StaticResource LabelEntryStyle}" />
+            <Entry x:Name="ExamenFinalEntry" Placeholder="Ingrese la nota del examen final" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
+
+            <Button Text="🧮 Calcular nota final" BackgroundColor="GreenYellow" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+
+            <Label Text="Nota Final: " FontAttributes="Bold" FontSize="26" HorizontalOptions="Center" Margin="0,20,0,0" TextColor="Black" />
+            <Label x:Name="NotaFinalLabel" FontSize="28" HorizontalOptions="Center" TextColor="Green" FontAttributes="Bold"/>
+
+            <Label Text="Equivalencia en Letra: " FontAttributes="Bold" FontSize="26" HorizontalOptions="Center" Margin="0,20,0,0" TextColor="Black"/>
+            <Label x:Name="EquivalenciaLabel" FontSize="28" HorizontalOptions="Center" TextColor="Blue" FontAttributes="Bold"/>
+
+            <Label x:Name="resultadoLabel" FontSize="12" HorizontalOptions="Center" TextColor="Blue" FontAttributes="Bold"/>
+
+
+
+            <Button Text="💾 Guardar Nota" Clicked="Guardanota_Clicked" 
+                    WidthRequest="180"
+                    TextColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" 
+                    BackgroundColor="#44bd32" 
+                    Margin="20"/>
+
+            <Button Text="Reporte" Clicked="ReporteButton_Clicked" BackgroundColor="Blue" TextColor="White" FontAttributes="Bold"/>
+           
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
