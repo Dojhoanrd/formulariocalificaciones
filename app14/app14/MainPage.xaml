@@ -17,7 +17,8 @@
             <Style x:Key="EntryStyle" TargetType="Entry">
                 <Setter Property="Margin" Value="10"/>
                 <Setter Property="FontSize" Value="20"/>
-                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="WhiteSmoke"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
                 
                 
@@ -37,9 +38,9 @@
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#2C3E50" Offset="0.1" />
                     
-                    <GradientStop Color="#34495E" Offset="0.3" />
+                    <GradientStop Color="DarkBlue" Offset="0.3" />
                   
-                    <GradientStop Color="#7F8C8D" Offset="0.6" />
+                    <GradientStop Color="DarkRed" Offset="0.6" />
                  
                     <GradientStop Color="#2E4053" Offset="0.9" />
                   
@@ -48,38 +49,46 @@
 
             <Label Text="Bienvenidos al Sistema de Calificación" FontSize="36"
                HorizontalTextAlignment="Center" Margin="0,0,0,20"
-               TextColor="DarkBlue" FontAttributes="Bold"/>
+               TextColor="White" FontAttributes="Bold"/>
 
             <StackLayout>
                 <Button Text="🌐 Probar Conexión" Clicked="TestConnection_Clicked" 
                          WidthRequest="180"
                          HorizontalOptions="CenterAndExpand" 
                          VerticalOptions="CenterAndExpand" 
-                         BackgroundColor="GreenYellow" />
+                         BackgroundColor="CadetBlue" />
 
             </StackLayout>
-            <Label Text="Profesor" Style="{StaticResource LabelEntryStyle}" />
-            <Entry x:Name="ProfesorEntry" Placeholder="Ingrese Nombre Profesor" Keyboard="Text" Style="{StaticResource EntryStyle}" />
-
-            <Label Text="Matrícula" Style="{StaticResource LabelEntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+        <Label Text="Profesor" Style="{StaticResource LabelEntryStyle}" />
+        </Frame>
+        <Entry x:Name="ProfesorEntry" Placeholder="Ingrese Nombre Profesor" Keyboard="Text" Style="{StaticResource EntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+                <Label Text="Matrícula" Style="{StaticResource LabelEntryStyle}" />
+            </Frame>
             <Entry x:Name="MatriculaEntry" Placeholder="Ingrese la matrícula" Keyboard="Text" Style="{StaticResource EntryStyle}" />
-
-            <Label Text="Nombre" Style="{StaticResource LabelEntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+                    <Label Text="Nombre" Style="{StaticResource LabelEntryStyle}" />
+            </Frame>
             <Entry x:Name="NombreEntry" Placeholder="Ingrese el nombre" Style="{StaticResource EntryStyle}" />
-
-            <Label Text="Nota de asistencia" Style="{StaticResource LabelEntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+                        <Label Text="Nota de asistencia" Style="{StaticResource LabelEntryStyle}" />
+            </Frame>
             <Entry x:Name="AsistenciaEntry" Placeholder="Ingrese la nota de asistencia" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
-
-            <Label Text="Nota de Trabajo Práctico" Style="{StaticResource LabelEntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+                            <Label Text="Nota de Trabajo Práctico" Style="{StaticResource LabelEntryStyle}" />
+            </Frame>
             <Entry x:Name="TrabajoPracticoEntry" Placeholder="Ingrese la nota del trabajo práctico" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
-
-            <Label Text="Nota del Examen Parcial" Style="{StaticResource LabelEntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+                                <Label Text="Nota del Examen Parcial" Style="{StaticResource LabelEntryStyle}" />
+            </Frame>
             <Entry x:Name="ExamenParcialEntry" Placeholder="Ingrese la nota del examen parcial" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
+            <Frame BackgroundColor="#BB1616">
+                                    <Label Text="Nota del Examen Final" Style="{StaticResource LabelEntryStyle}" />
+                </Frame>
+                <Entry x:Name="ExamenFinalEntry" Placeholder="Ingrese la nota del examen final" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
 
-            <Label Text="Nota del Examen Final" Style="{StaticResource LabelEntryStyle}" />
-            <Entry x:Name="ExamenFinalEntry" Placeholder="Ingrese la nota del examen final" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
-
-            <Button Text="🧮 Calcular nota final" BackgroundColor="GreenYellow" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
+            <Button Text="🧮 Calcular nota final" BackgroundColor="CadetBlue" Clicked="Button_Clicked" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
 
             <Label Text="Nota Final: " FontAttributes="Bold" FontSize="26" HorizontalOptions="Center" Margin="0,20,0,0" TextColor="Black" />
             <Label x:Name="NotaFinalLabel" FontSize="28" HorizontalOptions="Center" TextColor="Green" FontAttributes="Bold"/>
@@ -96,10 +105,10 @@
                     TextColor="White"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand" 
-                    BackgroundColor="#44bd32" 
+                    BackgroundColor="CadetBlue" 
                     Margin="20"/>
 
-            <Button Text="Reporte" Clicked="ReporteButton_Clicked" BackgroundColor="Blue" TextColor="White" FontAttributes="Bold"/>
+            <Button Text="Reporte" Clicked="ReporteButton_Clicked" BackgroundColor="Red" TextColor="White" FontAttributes="Bold"/>
            
         </StackLayout>
     </ScrollView>

@@ -4,34 +4,46 @@
              x:Class="app14.Reporte">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Reporte de Notas" FontSize="36" TextColor="DarkBlue" HorizontalOptions="Center" Margin="0,20,0,10" />
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    
+
+                    <GradientStop Color="DarkBlue" Offset="0.1" />
+
+                    <GradientStop Color="DarkRed" Offset="0.9" />
+
+                    
+
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label Text="Reporte de Notas" FontSize="36" TextColor="White" HorizontalOptions="Center" Margin="0,20,0,10" />
             <!-- Agrega un ActivityIndicator al principio -->
-            <ActivityIndicator x:Name="LoadingActivityIndicator" IsRunning="False" IsVisible="False" Color="DarkBlue" />
+            <ActivityIndicator x:Name="LoadingActivityIndicator" IsRunning="False" IsVisible="False" Color="White" />
 
             <ScrollView>
                 <StackLayout>
-                    <Label Text="Notas de Estudiantes" FontSize="24" TextColor="DarkBlue" HorizontalOptions="Center" Margin="0,20,0,10" />
+                    <Label Text="Notas de Estudiantes" FontSize="24" TextColor="White" HorizontalOptions="Center" Margin="0,20,0,10" />
 
                     <!-- Agrega aquí tu tabla con las notas de la base de datos -->
-                    <ListView x:Name="NotasListView" HasUnevenRows="True">
+                    <ListView x:Name="NotasListView" HasUnevenRows="True" BackgroundColor="#BB1616">
                         <ListView.Header>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="Nombre" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
-                                <Label Text="Asistencia" FontSize="18" VerticalOptions="Center" WidthRequest="100" TextColor="DarkBlue" />
-                                <Label Text="Trabajo Práctico" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
-                                <Label Text="Examen Parcial" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
-                                <Label Text="Examen Final" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
+                                <Label Text="Nombre" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
+                                <Label Text="Asistencia" FontSize="18" VerticalOptions="Center" WidthRequest="100" TextColor="White" />
+                                <Label Text="Trabajo Práctico" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
+                                <Label Text="Examen Parcial" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
+                                <Label Text="Examen Final" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
                             </StackLayout>
                         </ListView.Header>
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <StackLayout Orientation="Horizontal" BackgroundColor="{Binding RowColor}">
-                                        <Label Text="{Binding Nombre}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
-                                        <Label Text="{Binding Asistencia}" FontSize="18" VerticalOptions="Center" WidthRequest="100" TextColor="DarkBlue" />
-                                        <Label Text="{Binding TrabajoPractico}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
-                                        <Label Text="{Binding ExamenParcial}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
-                                        <Label Text="{Binding ExamenFinal}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="DarkBlue" />
+                                        <Label Text="{Binding Nombre}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
+                                        <Label Text="{Binding Asistencia}" FontSize="18" VerticalOptions="Center" WidthRequest="100" TextColor="White" />
+                                        <Label Text="{Binding TrabajoPractico}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
+                                        <Label Text="{Binding ExamenParcial}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
+                                        <Label Text="{Binding ExamenFinal}" FontSize="18" VerticalOptions="Center" WidthRequest="150" TextColor="White" />
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
